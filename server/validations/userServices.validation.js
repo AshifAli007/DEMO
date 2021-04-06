@@ -9,22 +9,12 @@ module.exports = {
   },
   addUser:{
     body: {
-      first_name: Joi.string().required(),
-      last_name: Joi.string().required(),
-      password: Joi.string().required(),
-      country_id:  Joi.required(),
+      firstName: Joi.string().required(),
+      lastName: Joi.string().required(),
       email:  Joi.string().email().required(),
-      mobile_no: Joi.number().required(),
-      address:  Joi.string().required(),
-      city_id: Joi.required(),
-      state_id: Joi.required(),
-      user_type: Joi.required(),
+      password: Joi.string().required(),
+      employeeId: Joi.string(),
+      organizationName: Joi.string()
     },
   },
-  forgotPassword:{
-      body: {
-        email: Joi.string().email().required(),
-        newPassword: Joi.string().required().max(128),
-      },
-    },
 }
